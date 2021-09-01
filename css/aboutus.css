@@ -58,7 +58,9 @@
 
 .image-w-caption-local img{
     width: auto;
-    height: 40em;
+    height: auto;
+    max-width: 90vw;
+    max-height: 33vw;
     float: none;
     border: 0;
     margin: auto;

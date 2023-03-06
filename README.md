@@ -10,3 +10,4 @@ A redesign of the stony brook rowing team website.
 ### Secondary Contributors
 
 * Sampson Berlinski
+* Zofia Stefankovic

@@ -110,3 +110,35 @@ header.main-image /* About Us Header Image */
     -o-background-size: cover;
     background-size: cover;
 }
+
+
+
+/* New Eboard Section CSS */
+
+.eboard-profile {
+    display:flex;
+    flex-direction: column;
+    /*background-color: rgb(255, 253, 251);*/
+    border-radius: 20px;
+    padding: 15px;
+    width: fit-content;
+    align-items: center;
+}
+
+.eboard-profile-img {
+    height: 20vw;
+    width: 20vw;
+    border-radius: 100%;
+}
+
+.eboard-profile-role {
+    font-family: 'Ubuntu';
+    font-weight: lighter;
+    font-size: 3vh;
+}
+
+.eboard-profile-name {
+    font-family: 'Ubuntu';
+    font-weight: lighter;
+    font-size: 5vh;
+}

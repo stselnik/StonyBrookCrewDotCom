@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+import { CloseIcon, MenuIcon } from "./icons";
 
 const NavigationBar = () => {
 
@@ -20,14 +21,8 @@ const NavigationBar = () => {
         {id: 4, text:'Prospective Rowers', path:'/prospectiverowers'}
     ];
 
-
-    return (
-        <nav className="absolute flex justify-center items-center h-[4rem] w-[100%] mx-3 my-3 text-white">
-            <Link href='/' className="absolute left-0">
-                <img src="/assets/SBU Crew Logo Transparent.png" className="h-[3.6rem]" alt="SBUCrew" />  
-            </Link>
-
-            {/* Desktop Navigation */}
+    const DesktopNavbar = () => {
+        return(
             <ul className="hidden sm:flex justify-center ">
                 {pages.map(page => (
                     <Link key={page.id} href={page.path} className="p-5 hover:underline underline-offset-4 hover:text-[#ff2828]">
@@ -35,11 +30,47 @@ const NavigationBar = () => {
                     </Link>
                 ))}
             </ul>
+        );
+    }
 
+    const MobileNavToggle = () => {
+        return(
+            <div onClick={toggleMobileNav} className="block mr-10 ml-auto sm:hidden z-50">
+                {mobileNav ? <CloseIcon /> : <MenuIcon />}
+            </div>      
+        )
+    }
 
+    let MobileNavMenu = () => {
+        return (
+            <div>
+                <ul className={mobileNav 
+                ? 'flex flex-col fixed sm:hidden right-0 top-0 w-[40%] h-full bg-white transition ease-in-out duration-500'
+                : 'flex flex-col w-[40%] left-[100%] transition ease-in-out duration-500 fixed top-0 bottom-0'
+                }>
+                {pages.map(page => (
+                    <>
+                    <Link key={page.id} href={page.path} className="p-8 text-black hover:underline underline-offset-4 hover:text-[#ff2828]">
+                        {page.text}
+                    </Link>
+                    <hr />
+                    </>
+                    
+                    
+                ))}
+                </ul> 
+            </div>
+        );
+    }
 
-
-            
+    return (
+        <nav className="absolute flex justify-center items-center h-[4rem] w-[100%] mx-3 my-3 text-white z-50">
+            <Link href='/' className="absolute left-0">
+                <img src="/assets/SBU Crew Logo Transparent.png" className="h-[3.6rem]" alt="SBUCrew" />  
+            </Link>
+            <DesktopNavbar />
+            <MobileNavToggle />
+            <MobileNavMenu />
         </nav>
     )
 }

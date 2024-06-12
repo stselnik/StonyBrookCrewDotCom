@@ -18,14 +18,14 @@ const NavigationBar = () => {
         {id: 1, text:'Homepage', path:'/'},
         {id: 2, text:'About Us', path: '/aboutus'},
         {id: 3, text:'History', path: '/history'},
-        {id: 4, text:'Prospective Rowers', path:'/prospectiverowers'}
+        {id: 4, text:'Prospective Members', path:'/prospectiverowers'},
     ];
 
     const DesktopNavbar = () => {
         return(
-            <ul className="hidden sm:flex justify-center ">
+            <ul className="hidden md:flex justify-center">
                 {pages.map(page => (
-                    <Link key={page.id} href={page.path} className="p-5 hover:underline underline-offset-4 hover:text-[#ff2828]">
+                    <Link key={page.id} href={page.path} className="p-5 text-[#fffbfb] font-light drop-shadow-md hover:underline underline-offset-4 hover:text-[#ff2828]">
                         {page.text}
                     </Link>
                 ))}
@@ -35,7 +35,7 @@ const NavigationBar = () => {
 
     const MobileNavToggle = () => {
         return(
-            <div onClick={toggleMobileNav} className="block mr-10 ml-auto sm:hidden z-50">
+            <div onClick={toggleMobileNav} className="block mr-10 ml-auto md:hidden z-50">
                 {mobileNav ? <CloseIcon /> : <MenuIcon />}
             </div>      
         )
@@ -45,7 +45,7 @@ const NavigationBar = () => {
         return (
             <div>
                 <ul className={mobileNav 
-                ? 'flex flex-col fixed sm:hidden right-0 top-0 w-[40%] h-full bg-white transition ease-in-out duration-500'
+                ? 'flex flex-col fixed md:hidden right-0 top-0 w-[40%] h-full bg-white transition ease-in-out duration-500'
                 : 'flex flex-col w-[40%] left-[100%] transition ease-in-out duration-500 fixed top-0 bottom-0'
                 }>
                 {pages.map(page => (
@@ -64,8 +64,8 @@ const NavigationBar = () => {
     }
 
     return (
-        <nav className="absolute flex justify-center items-center h-[4rem] w-[100%] mx-3 my-3 text-white z-50">
-            <Link href='/' className="absolute left-0">
+        <nav className="absolute flex justify-center items-center h-[4rem] w-full my-3 text-white z-50">
+            <Link href='/' className="absolute left-3">
                 <img src="/assets/SBU Crew Logo Transparent.png" className="h-[3.6rem]" alt="SBUCrew" />  
             </Link>
             <DesktopNavbar />

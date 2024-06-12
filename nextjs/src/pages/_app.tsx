@@ -5,7 +5,7 @@ import type { AppProps } from "next/app";
 
 /* Import Fonts from Google Fonts */
 const lato = Lato({ 
-  weight: ['100', '300'],
+  weight: ['100', '300', '400'],
   style: ['normal', 'italic'],
   subsets: ['latin'] 
 })
@@ -13,7 +13,7 @@ const lato = Lato({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={lato.className}> 
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </main>
     )
 }

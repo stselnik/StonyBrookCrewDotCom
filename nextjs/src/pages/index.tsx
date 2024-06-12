@@ -6,25 +6,26 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
+    /* Header */
     <Layout>
     {/* Landing Screen */}
     <header className="text-center text-white h-[80vh] bg-[url('/assets/landing-img.jpeg')] bg-cover">
       <div className="container mx-auto relative w-fit top-[40%] bottom-[60%]">
         <div className="flex flex-col">
           <div className="mx-auto">
-            <h1 className="uppercase text-4xl">
+            <h1 className="uppercase text-5xl ">
               Stony Brook Rowing
             </h1>
           </div>
           <hr className="my-5"/>
           <div className="mx-auto">
-            <p className="mb-5 italic">Making waves since 1958</p>
+            <p className=" text-lg mb-5 font-light italic">Making waves since 1958</p>
           </div>
         </div>
       </div>
     </header>
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className} bg-[rgb(255,247,247)]`}
     >
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">

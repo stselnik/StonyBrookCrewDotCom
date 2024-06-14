@@ -1,11 +1,9 @@
 import Head from "next/head";
 import Navbar from "./navbar";
+import React, { ReactNode } from "react";
 
-type LayoutProps = {
-    children: React.ReactNode;
-  };
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout(props: { children : ReactNode}) {
     return (
         <>
         <Head>
@@ -14,7 +12,7 @@ export default function Layout({ children }: LayoutProps) {
             <title>Stony Brook Rowing</title>
         </Head>
         <Navbar />
-        { children }
+        { props.children }
         </>
     )
 }

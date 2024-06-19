@@ -1,6 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Inter } from "next/font/google";
 import Layout from "@/components/layout";
+import Events from "@/components/events";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -8,8 +10,9 @@ export default function Home() {
   return (
     /* Header */
     <Layout>
+
     {/* Landing Screen */}
-    <header className="text-center text-white h-[80vh] bg-[url('/assets/landing-img.jpeg')] bg-cover">
+    <header className="text-center text-white h-[90vh] bg-[url('/assets/landing-img.jpeg')] bg-bottom bg-cover drop-shadow">
       <div className="container mx-auto relative w-fit top-[40%] bottom-[60%]">
         <div className="flex flex-col">
           <div className="mx-auto">
@@ -24,110 +27,53 @@ export default function Home() {
         </div>
       </div>
     </header>
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className} bg-[rgb(255,247,247)]`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+
+    <main className={`items-center w-fit min-h-screen p-3 md:p-10 bg-[#D16565]`}>
+      {/* Main Information */}
+      <div className="flex flex-col xl:flex-row w-fit p-10 relative top-[-20vh] mb-10 bg-[white] rounded-md drop-shadow-element">
+        <div className="flex-1 xl:max-w-[40%]">
+          <h1 className="text-4xl font-[Georgia]">Who We Are</h1>
+          <hr className="border-red-800 mb-3" />
+          <p className="text-lg 2xl:text-xl 3xl:text-2xl font-light mb-3">
+            Stony Brook University Crew is a high performance club rowing team that competes at an intercollegiate level 
+            throughout New York, New England, and the Mid-Atlantic region of the United States. You can read more about 
+            the team <Link href='/aboutus' className="underline hover:text-[#5eb7ff]">here</Link>.</p>
+          <p className="text-lg 2xl:text-xl 3xl:text-2xl font-light mb-3">
+          Interested in joining? Rowers and coxswains of all skill levels are welcome to join us as we work daily 
+          throughout each season to become better athletes. 
+          Check out our <Link href='/prospectiverowers' className="underline hover:text-[#5eb7ff]">prospective rowers</Link> form. 
+          </p>
+
+          <h1 className="text-4xl font-[Georgia]">Get In Touch</h1>
+          <hr className="border-red-800 mb-3" />
+          <p className="text-lg 2xl:text-xl 3xl:text-2xl font-light mb-3">
+            Want to contact us? Feel free to reach us directly at any time at&nbsp; 
+            <a href="mailto:%75%73%62%63%72%65%77%40%67%6D%61%69%6C%2E%63%6F%6D" target="blank" className="text-[#5eb7ff] hover:text-[#5a96c7]">usbcrew@gmail.com</a>.
+            {/* Email URL above is URL encoded to partially prevent spam from email harvester programs. */}
+          </p>
+          <p className="text-lg 2xl:text-xl 3xl:text-2xl font-light">
+            You can also check out and reach out to our&nbsp;
+            <a href="https://www.instagram.com/stonybrookrowing/" target="blank" className="underline hover:text-[#e35b96]">Stony Brook Rowing Instagram</a>
+            &nbsp;which is regularly updated with announcements and photos from our recent events.
+          </p>
+        </div>
+
+        {/* Slideshow / Carousel (Needs to be implemented) */}
+        <div className="flex-1 h-full pt-3 lg:p-5 self-center">
+            <img src='/assets/Slideshow/slideshow1.JPG' className="rounded-md max-h-[740px] mx-auto drop-shadow-xl" />
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      {/* Upcoming Events Section*/}
+      <div className="flex flex-col relative top-[-20vh]">
+        <div className="px-3 ">
+          <h1 className="text-4xl font-[Georgia] text-[white]">Upcoming Events</h1>
+          <hr className="border-red-800 mb-3" />
+        </div>
+        <Events />
       </div>
+      
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
     </Layout>
   );

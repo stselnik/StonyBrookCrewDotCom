@@ -24,7 +24,7 @@ const TeamSection= () => {
                 <hr className="border-red-800 mb-3"/>
                 <p className="text-xl font-light">
                 Stony Brook University Crew is a high performance club rowing team that competes at an intercollegiate level
-                throughout the northeastern section of the United States.
+                throughout New York, New England, and the Mid-Atlantic region of the United States.
                 </p>
                 <ul className="text-xl font-light list-disc list-inside">
                     <li>We practice five days a week, Monday through Friday, with land practices taking place at 6 am at the Stony 
@@ -109,6 +109,7 @@ const EboardSection = () => {
             fundraising, team communications, and more.
             </p>
         </div>
+        {/* E-Board Profiles */}
         <EBoard />
         </>
     );
@@ -123,7 +124,7 @@ export default function AboutUs() {
             { /* Landing Screen */ }
             <LandingScreen />
             { /* Main Info */}
-            <main className="flex min-h-screen flex-col items-center justify-between px-10 lg:px-24 3xl:px-40 py-12">
+            <main className="flex min-h-screen flex-col items-center justify-between bg-[#F9F9F9] px-10 lg:px-24 3xl:px-40 py-12">
                 <TeamSection />
                 <CoachSection />
                 <EboardSection />

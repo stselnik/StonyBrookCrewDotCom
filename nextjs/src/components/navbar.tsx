@@ -49,12 +49,12 @@ const NavigationBar = () => {
                 : 'flex flex-col w-[40%] left-[100%] transition ease-in-out duration-500 fixed top-0 bottom-0'
                 }>
                 {pages.map(page => (
-                    <>
-                    <Link key={page.id} href={page.path} className="p-8 text-black hover:underline underline-offset-4 hover:text-[#ff2828]">
-                        {page.text}
-                    </Link>
-                    <hr />
-                    </>
+                    <div key={page.id} className="flex flex-col">
+                        <Link  href={page.path} className="p-8 text-black hover:underline underline-offset-4 hover:text-[#ff2828]">
+                            {page.text}
+                        </Link>
+                        <hr />
+                    </div>
                     
                     
                 ))}

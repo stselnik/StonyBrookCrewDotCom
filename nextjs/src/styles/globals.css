@@ -33,6 +33,25 @@ body {
   }
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    background-color: black ;
+  }
+  to {
+    background-color: black ;
+    opacity: 100;
+  }
+}
+
+.fade-in-element{
+  animation: fade-in 1s ease-in-out;
+}
+
+.drop-shadow-element {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 /* Allows font to adjust as screen size changes. (Fonts are in rem units, adjusting the base font will allow all others to follow. 
 @layer base {
   html {

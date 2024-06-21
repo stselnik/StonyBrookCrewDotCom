@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { Lato } from "next/font/google";
+import { Lato, Lora } from "next/font/google";
 import type { AppProps } from "next/app";
 
 
@@ -7,12 +7,19 @@ import type { AppProps } from "next/app";
 const lato = Lato({ 
   weight: ['100', '300', '400'],
   style: ['normal', 'italic'],
-  subsets: ['latin'] 
-})
+  subsets: ['latin'],
+  variable: '--font-lato',
+});
+
+const lora = Lora({
+  subsets: ['latin'], 
+  style: ['normal', 'italic'],
+  variable: '--font-lora'
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={lato.className}> 
+    <main className={`${lato.variable} ${lora.variable} font-lato`}> 
       <Component {...pageProps} />
     </main>
     )

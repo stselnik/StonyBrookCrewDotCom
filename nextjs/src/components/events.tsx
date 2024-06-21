@@ -35,7 +35,7 @@ const Event = (event: {name: string; date: Date; time: string; location: string;
     }
     
     return(
-            <div key={event.date.getTime()} className="bg-[#FFDADA] rounded-lg border-solid border-[3px] border-[#FFDADA] hover:border-white drop-shadow-element">
+            <div key={event.date.getTime()} className="bg-[#FFDADA] rounded-2xl border-solid border-[3px] border-[#FFDADA] hover:border-white drop-shadow-element">
                 { /* Main Event Information */ }
                 <div className="flex flex-row w-full h-20 cursor-pointer" onClick={() => setExpand(!expand)}>
                     <div className="flex flex-col justify-center w-full h-full p-2 md:p-5 ">
@@ -70,7 +70,7 @@ const Events = () => {
     
     const events = [
         {name: "Head of the Fish - Saratoga Regatta", date: new Date('October 26, 2024'), time: "",location: "Fish Creek, Saratoga Springs, NY", directions:"684 N Country Rd, Setauket- East Setauket, NY 11733", desc: "", calendar:"https://calendar.app.google/9jkTmUsnaCxfvWGP7"},
-        {name: "Stony Brook Crew Alumni Day", date: new Date('November 2, 2024'), time:"9:00AM - 11:30AM", location: "Port Jefferson Yacht Club", directions:"2 Pass Way, Port Jefferson, NY 11777", desc:"Calling all Alumni of SBU Crew! Alumni Breakfast Day is being held on November 2nd, 2024 at the Port Jefferson Yacht Club Clubhouse from 9AM-11:30AM. Enjoy having a tasty meal while catching up with your fellow SBU Crew alumni! Save the date and RSVP by email now: sbu.crew.alumni@gmail.com. We can't wait to see you there!", calendar:""}
+        {name: "Stony Brook Crew Alumni Day", date: new Date('November 2, 2024'), time:"9:00AM - 11:30AM", location: "Port Jefferson Yacht Club", directions:"2 Pass Way, Port Jefferson, NY 11777", desc:"Calling all Alumni of SBU Crew! Alumni Breakfast Day is being held on November 2nd, 2024 at the Port Jefferson Yacht Club Clubhouse from 9AM-11:30AM. Enjoy having a tasty meal while catching up with your fellow SBU Crew alumni! Save the date and RSVP by email now: sbu.crew.alumni@gmail.com. We can't wait to see you there!", calendar:"https://calendar.app.google/9jkTmUsnaCxfvWGP7"}
     ];
 
     // Sorts Events into chronological order.
@@ -84,7 +84,7 @@ const Events = () => {
 
     return(
         <>
-        <ul className="flex flex-col gap-3 px-3">
+        <ul className="flex flex-col gap-3 px-3 fade-in-element">
             {upcomingEvents.map(event => (
                 Event(event)
             ))}

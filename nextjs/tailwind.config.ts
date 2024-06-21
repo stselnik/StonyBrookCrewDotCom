@@ -18,6 +18,10 @@ const config: Config = {
         '4xl': '2560px',
         '5xl': '3840px'
       },
+      fontFamily: {
+        lato:['var(--font-lato)'],
+        lora:['var(--font-lora)'],
+      }
     },
   },
   plugins: [],

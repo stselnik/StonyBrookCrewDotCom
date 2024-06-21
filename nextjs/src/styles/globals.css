@@ -36,10 +36,8 @@ body {
 @keyframes fade-in {
   from {
     opacity: 0;
-    background-color: black ;
   }
   to {
-    background-color: black ;
     opacity: 100;
   }
 }
@@ -50,6 +48,12 @@ body {
 
 .drop-shadow-element {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.homepage-landing-img {
+  background: linear-gradient(180deg, rgba(255,255,255, 0) 80.5%, rgba(255, 242, 213, 0.2) 85.5%, #c84444 100%), url('/assets/landing-img.jpeg') lightgray 37.126px 0px / 97.638% 100.19% no-repeat;
+  background-position: bottom;
+  background-size: cover;
 }
 
 /* Allows font to adjust as screen size changes. (Fonts are in rem units, adjusting the base font will allow all others to follow. 

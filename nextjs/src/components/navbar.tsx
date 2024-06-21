@@ -25,7 +25,7 @@ const NavigationBar = () => {
         return(
             <ul className="hidden md:flex justify-center">
                 {pages.map(page => (
-                    <Link key={page.id} href={page.path} className="p-5 text-[#fffbfb] font-light drop-shadow-md hover:underline underline-offset-4 hover:text-[#ff2828]">
+                    <Link key={page.id} href={page.path} className="p-5 text-[#fffbfb] font-light hover:underline underline-offset-4 hover:text-[#ff2828]">
                         {page.text}
                     </Link>
                 ))}

@@ -8,7 +8,7 @@ const LandingScreen = () => {
     return(
         <header className="h-[50vh] bg-[url('/assets/aboutus-img.jpg')] bg-cover bg-center drop-shadow-xl">
             <div className="h-full bg-gradient-to-b from-[#524a3db1] to-[#a7a7a70d] to-30% flex justify-center relative" >
-                <h1 className="absolute bottom-0 mb-3 drop-shadow font-[Georgia] text-[#F9F9F9] text-6xl ">About Us</h1>
+                <h1 className="font-lora absolute bottom-0 mb-3 drop-shadow text-[#F9F9F9] text-7xl">About Us</h1>
             </div>
         </header>
     );
@@ -20,7 +20,7 @@ const TeamSection= () => {
     const TeamInfo = () => {
         return(
             <div className="lg:flex-1 self-center ">
-                <h2 className=" text-5xl font-[Georgia] mb-3">The Team</h2>
+                <h2 className="font-lora text-5xl italic mb-3">The Team</h2>
                 <hr className="border-red-800 mb-3"/>
                 <p className="text-xl font-light">
                 Stony Brook University Crew is a high performance club rowing team that competes at an intercollegiate level
@@ -47,7 +47,7 @@ const TeamSection= () => {
 
     return (
         <>
-        <div className="flex flex-wrap w-full mb-5 gap-5 lg:gap-14">
+        <div className="flex flex-wrap w-full mb-5 gap-5 lg:gap-14 fade-in-element">
             <TeamInfo />
             <TeamImage />
         </div>
@@ -60,7 +60,7 @@ const CoachSection = () => {
     const CoachInfo = () => {
         return(
             <div className="lg:flex-1 self-center">
-                <h2 className="text-5xl font-[Georgia] mb-3">Our Coach</h2>
+                <h2 className="font-lora text-5xl italic mb-3">Our Coach</h2>
                 <hr className="border-red-800 mb-3"/>
                 <div className="lg:hidden p-5">
                      <CoachImage />
@@ -101,7 +101,7 @@ const EboardSection = () => {
     return (
         <>
         <div className="self-start mb-10">
-            <h2 className="text-5xl font-[Georgia] mb-3">Our E-Board</h2>
+            <h2 className="font-lora text-5xl italic mb-3">Our E-Board</h2>
             <hr className="border-red-800 mb-3"/>
             <p className="text-xl font-light">
             Our Executive Board handles all non-coaching administrative duties for the club. This includes equipment 

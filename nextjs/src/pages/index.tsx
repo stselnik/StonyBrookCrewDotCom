@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Inter } from "next/font/google";
 import Layout from "@/components/layout";
 import Events from "@/components/events";
+import Slideshow from "@/components/slideshow";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +29,7 @@ export default function Home() {
       </div>
     </header>
 
-    <main className={`items-center w-fit min-h-screen p-3 md:p-10 bg-[#c84444]`}>
+    <main className={`items-center min-h-screen min-w-screen p-3 md:p-10 bg-[#c84444]`}>
       {/* Main Information */}
       <div className="flex flex-col xl:flex-row w-fit p-10 relative top-[-20vh] mb-10 bg-[white] rounded-md drop-shadow-element">
         <div className="flex-1 xl:max-w-[40%] fade-in-element">
@@ -59,8 +60,10 @@ export default function Home() {
         </div>
 
         {/* Slideshow / Carousel (Needs to be implemented) */}
-        <div className="flex-1 h-full pt-3 lg:p-5 self-center fade-in-element">
-            <img src='/assets/Slideshow/slideshow2.JPG' className="rounded-md max-h-[740px] mx-auto drop-shadow-xl" />
+        <Slideshow />
+        <div className={/*"flex-1 w-full h-fit fade-in-element p-5"*/ ""}>
+            {/* <img src='/assets/Slideshow/slideshow2.JPG' className="rounded-md max-h-[740px] mx-auto drop-shadow-xl" /> */ }
+            
         </div>
       </div>
 

@@ -55,7 +55,7 @@ const Event = (event: {name: string; date: Date; time: string; location: string;
                     <p className="sm:hidden">{days[event.date.getDay()]}, {months[event.date.getMonth()]} {event.date.getDate()}, {event.date.getFullYear()}</p>
                     <p className={event.time.length != 0 ? "" : "hidden"}>Time: {event.time}</p>
                     <p className="sm:hidden">Location: {event.location}</p>
-                    <p className={event.directions.length != 0 ? "" : "hidden"}>Directions: <a href={formatDirections(event.directions)} className="text-[#4690ff] hover:underline">{event.directions}</a></p>
+                    <p className={event.directions.length != 0 ? "" : "hidden"}>Directions: <a href={formatDirections(event.directions)} className="text-[#4690ff] hover:underline" target="blank">{event.directions}</a></p>
                     <p className={event.desc.length != 0 ? "p-3 italic" : "hidden"}>{event.desc}</p>
                     <div className={event.calendar.length != 0 ? "mx-auto bg-[#f2fff700] p-1 m-2 rounded-lg" : "hidden"}>
                         <a href={event.calendar} className={open_sans.className + " underline hover:text-[#4690ff]"} target="blank">Add to Google Calendar</a>

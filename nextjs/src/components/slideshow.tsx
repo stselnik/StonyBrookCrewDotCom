@@ -30,6 +30,15 @@ const Slideshow = () => {
         setActive(index);
     }
 
+    const SlideshowButtons = () => {
+        return(
+            <>
+            <button onClick={() => {prevSlide(); clearTimeout(timeout); }} className="text-white p-3 my-auto rounded-full hover:text-[#74b5ff] hover:bg-[#0000002d]"> <LeftIcon /> </button>
+            <button onClick={() => {nextSlide(); clearTimeout(timeout); }} className="text-white p-3 my-auto rounded-full hover:text-[#74b5ff] hover:bg-[#0000002d]"> <RightIcon /> </button>
+            </>
+        )
+
+    }
 
     const SlideshowDots = () => {
         return(
@@ -47,9 +56,13 @@ const Slideshow = () => {
     const imageCSS = "absolute h-full aspect-[3/2] object-cover transition-opacity ease-in-out rounded-xl drop-shadow-element z-10 "
 
 
-    // Timer to automatically increment slides.
+    /* Timer to automatically increment slides. */
+    let timeout: NodeJS.Timeout;
     useEffect(() => {
-        const timeout = setTimeout(() => nextSlide(), 3500); // Change every 3.5 seconds
+        // Proceed to next slide every 3.5 seconds.
+        timeout = setTimeout(() => nextSlide(), 3500); 
+
+        // Cleanup function so multiple timeouts do not appear when the state changes:
         return () => { clearTimeout(timeout); }
     }, [active])
 
@@ -58,8 +71,7 @@ const Slideshow = () => {
         relative flex justify-center self-center m-3 z-50 fade-in-element
         w-[140%] max-w-[90vw] min-h-[55vw] xl:flex-1 xl:h-[65vh] xl:max-h-[35vw] xl:min-h-[25vw] ">
             <div className="absolute flex flex-row justify-between aspect-[3/2] h-full max-w-full z-40">
-                <button onClick={() => {prevSlide(); }} className="text-white p-3 my-auto rounded-full hover:text-[#74b5ff] hover:bg-[#0000002d]"> <LeftIcon /> </button>
-                <button onClick={() => {nextSlide(); }} className="text-white p-3 my-auto rounded-full hover:text-[#74b5ff] hover:bg-[#0000002d]"> <RightIcon /> </button>
+                <SlideshowButtons />
             </div>
             <div className="absolute bottom-3">
                 <SlideshowDots />

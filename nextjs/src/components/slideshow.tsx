@@ -6,9 +6,10 @@ const Slideshow = () => {
     
     const images = [
         {id: 0, path: '/assets/Slideshow/slideshow1.JPG', alt: 'Rowing Image 1'},
-        {id: 1, path: '/assets/Slideshow/slideshow2.JPG', alt: 'Rowing Image 2'},
-        {id: 2, path: '/assets/Slideshow/slideshow3.JPG', alt: 'Rowing Image 3'},
-        {id: 3, path: '/assets/Slideshow/slideshow4.JPG', alt: 'Rowing Image 4'},
+        {id: 1, path: '/assets/Slideshow/slideshow4.JPG', alt: 'Rowing Image 4'},
+        {id: 2, path: '/assets/Slideshow/slideshow6.jpg', alt: 'Rowing Image 6'},
+        {id: 3, path: '/assets/Slideshow/slideshow5.JPEG', alt: 'Rowing Image 5'},
+        {id: 4, path: '/assets/Slideshow/slideshow7.JPEG', alt: 'Rowing Image 7'},
 
     ];
 
@@ -33,8 +34,8 @@ const Slideshow = () => {
     const SlideshowButtons = () => {
         return(
             <>
-            <button onClick={() => {prevSlide(); clearTimeout(timeout); }} className="text-white p-3 my-auto rounded-full hover:text-[#74b5ff] hover:bg-[#0000002d]"> <LeftIcon /> </button>
-            <button onClick={() => {nextSlide(); clearTimeout(timeout); }} className="text-white p-3 my-auto rounded-full hover:text-[#74b5ff] hover:bg-[#0000002d]"> <RightIcon /> </button>
+            <button onClick={() => {prevSlide(); clearTimeout(timeout); }} className="text-white p-3 my-auto rounded-full hover:text-[#74b5ff] hover:bg-[#0000002d] z-40"> <LeftIcon /> </button>
+            <button onClick={() => {nextSlide(); clearTimeout(timeout); }} className="text-white p-3 my-auto rounded-full hover:text-[#74b5ff] hover:bg-[#0000002d] z-40"> <RightIcon /> </button>
             </>
         )
 
@@ -45,9 +46,9 @@ const Slideshow = () => {
             <div className="flex flex-row justify-between gap-3 z-50">
                 {images.map(image => (
                     <div key={image.id} onClick={() => setSlide(image.id)} className={image.id === active
-                        ? "rounded-full w-[10px] h-[10px] cursor-pointer bg-white z-50" 
-                        : "rounded-full w-[10px] h-[10px] cursor-pointer bg-[#dc5252] z-50"
-                    }></div>
+                        ? "rounded-full w-[10px] h-[10px] cursor-pointer bg-white z-50 transition-colors ease-in-out delay-0" 
+                        : "rounded-full w-[10px] h-[10px] cursor-pointer bg-[#dc5252] z-50 transition-colors ease-in-out delay-150"
+                    } />
                 ))}
             </div>
         );
@@ -70,7 +71,7 @@ const Slideshow = () => {
         <div className="
         relative flex justify-center self-center m-3 z-50 fade-in-element
         w-[140%] max-w-[90vw] min-h-[55vw] xl:flex-1 xl:h-[65vh] xl:max-h-[35vw] xl:min-h-[25vw] ">
-            <div className="absolute flex flex-row justify-between aspect-[3/2] h-full max-w-full z-40">
+            <div className="absolute flex flex-row justify-between aspect-[3/2] h-full max-w-full">
                 <SlideshowButtons />
             </div>
             <div className="absolute bottom-3">
@@ -91,32 +92,6 @@ const Slideshow = () => {
 
         </div>
     );
-
-
-
-    {/*const image_css = "absolute object-cover w-full h-auto transition-opacity ease-in-out rounded-xl overflow-visible"
-
-    return(
-        <div className="relative w-full h-max drop-shadow-element rounded-xl">
-            <div className="absolute flex flex-row justify-between w-full h-full top-1/2 bottom-1/2 p-3">
-                <button onClick={() => prevSlide()} className="z-50 text-white">Prev</button>
-                <button onClick={() => nextSlide()} className="z-50 text-white">Next</button>
-            </div>
-           
-            {images.map(image => (
-                <img 
-                key={image.id}
-                src={image.path}
-                className={image.id !== active ? image_css + " opacity-0 delay-150 z-10" : image_css + " opacity-100 delay-0 z-40"} 
-                />
-                
-            ))}
-        </div>
-
-            
-
-
-    );*/}
 
 }
 

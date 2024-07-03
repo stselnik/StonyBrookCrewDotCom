@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 250, 248, 248;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 /* 
@@ -55,6 +55,8 @@ body {
   background-position: bottom;
   background-size: cover;
 }
+
+
 
 /* Allows font to adjust as screen size changes. (Fonts are in rem units, adjusting the base font will allow all others to follow. 
 @layer base {

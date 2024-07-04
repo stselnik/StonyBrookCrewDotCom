@@ -1,5 +1,10 @@
 import Layout from "@/components/layout";
 import styles from "@/styles/history.module.css"
+import Image from 'next/image'
+import historyImg1  from '/public/assets/History/historypic1.jpg';
+import historyImg2  from '/public/assets/History/SBU Crew 1967.jpeg';
+import historyImg3 from '/public/assets/History/NYStatesRegatta2023Boats.jpeg';
+import historyImg4 from '/public/assets/History/BraxtonRegatta2023.JPG';
 import { useEffect, useRef, useState } from "react";
 
 export default function History() {
@@ -56,8 +61,8 @@ export default function History() {
                     </div>
     
                     <div className="flex-1 self-center flex justify-center">
-                        <img 
-                            src="/assets/History/historypic1.jpg" 
+                        <Image 
+                            src={historyImg1} 
                             alt="Black and White Photo of a SBU Crew member holding an oar." 
                             className="object-cover rounded-sm my-3"
                         />
@@ -76,7 +81,7 @@ export default function History() {
                     According to archived articles from the New York Times the team consistently placed in the top 3 at the Metropolitan Championships, often coming as close as a half a length from the win, as it did in 1968 against Iona College [2]. The team peaked in the late 1970's, earning the Metropolitan Championship win in 1976. While the varsity program disbanded by the end of the 1970's due to inadequate means to support, the program raised three to the Stony Brook Athletic Hall of Fame: John Brisson Jr. (1976), Jonathan Cayle (1976), and Denise Logan-Heuser (1977).
                 </p>
                 <div className=" bg-[#fdfef4d6] rounded-b-sm w-[90%] mx-auto my-3">
-                    <img src="/assets/History/SBU Crew 1967.jpeg" alt="Group Photo of the 1967 SBU Rowing team." className="w-full" />
+                    <Image src={historyImg2} alt="Group Photo of the 1967 SBU Rowing team." className="w-full" />
                     <figcaption className="text-center italic text-base text-gray-900">The 1967 Stony Brook Crew</figcaption>
                 </div>
             </div>
@@ -100,8 +105,8 @@ export default function History() {
                     </p>
                 </div>
                 <div className="flex-1 self-center ">
-                    <img 
-                        src="/assets/History/NYStatesRegatta2023Boats.jpeg"
+                    <Image 
+                        src={historyImg3}
                         alt="The sterns of 3 racing shells with a blue sky behind them."
                         className="object-cover rounded-lg drop-shadow-element"
                     />
@@ -116,15 +121,16 @@ export default function History() {
                 In 2015, the team moved from Stony Brook Harbor to the Port Jefferson Yacht Club where they currently reside.
             </p>
             <div className="my-5">
-                <img
-                    src="/assets/History/BraxtonRegatta2023.JPG"
+                <Image
+                    src={ historyImg4 }
                     alt="Stony Brook Crew members walking away, surrounded by fall-colored leaves and other regatta goers."
                     className="w-[97%] mx-auto rounded-2xl drop-shadow-element"
                 />
                 <figcaption className="text-center text-lg font-lato font-light text-[#dedede] italic">Bill Braxton Memorial Regatta, Fall 2023</figcaption>
             </div>
+
             <div>
-                <h3 className="text-xl font-lora">References</h3>
+                <h3 className="text-2xl font-lora">References</h3>
                 <ol className="text-lg">
                     <li>[1] "The History of Stony Brook Crew" The Founders Group, Stony Brook Alumni Association.</li>
                     <li>[2] <a  href="https://www.nytimes.com/1968/05/05/archives/iona-eight-keeps-met-rowing-title-scores-by-halflength-over-stony.html" 
@@ -150,7 +156,6 @@ export default function History() {
                     <VarsityYearsSection />
                     <SectionTransition />
                     <ClubYears />
-                    {/* Create a div component that updates the body by comparing its coordinates with getBoundingClientRect and compare the bottom w scrollY */}
                 </div>
 
             </main>

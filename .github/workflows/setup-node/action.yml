@@ -17,7 +17,7 @@ runs:
         key: node-modules-${{ hashFiles('package-lock.json') }}
 
     - name: Ensure package-lock.json
-      run: |
+      shell: bash
         if [ ! -f package-lock.json ]; then
           npm install
           git add package-lock.json

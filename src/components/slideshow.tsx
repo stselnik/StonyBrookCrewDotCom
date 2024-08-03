@@ -5,9 +5,9 @@ import { LeftIcon, RightIcon } from "./icons";
 const Slideshow = () => {
 
   const images = [
-    { id: 0, path: '/assets/Slideshow/slideshow1.JPG', alt: 'Rowing Image 1' },
-    { id: 1, path: '/assets/Slideshow/slideshow4.JPG', alt: 'Rowing Image 4' },
-    { id: 2, path: '/assets/Slideshow/slideshow6.JPG', alt: 'Rowing Image 6' },
+    { id: 0, path: '/assets/Slideshow/slideshow1.jpg', alt: 'Rowing Image 1' },
+    { id: 1, path: '/assets/Slideshow/slideshow4.jpg', alt: 'Rowing Image 4' },
+    { id: 2, path: '/assets/Slideshow/slideshow6.jpg', alt: 'Rowing Image 6' },
     { id: 3, path: '/assets/Slideshow/slideshow5.jpeg', alt: 'Rowing Image 5' },
     { id: 4, path: '/assets/Slideshow/slideshow7.jpeg', alt: 'Rowing Image 7' },
 

@@ -30,7 +30,7 @@ export default function Home() {
 
     <main className={`items-center min-h-screen min-w-screen bg-[#c84444]`}>
       {/* Main Information */}
-      <div className="flex flex-col xl:flex-row w-fit relative p-10 mb-10 gap-10 bg-[white] drop-shadow-element">
+      <div className="flex flex-col xl:flex-row w-fit relative py-10 px-5 lg:px-10 mb-10 gap-10 bg-[white] drop-shadow-element">
         {/* Main Text Section */}
         <div className="flex-1 xl:max-w-[45%] fade-in-element">
           <h1 className="text-4xl text-[2.4rem] font-lora italic">Who We Are</h1>
@@ -64,7 +64,7 @@ export default function Home() {
       </div>
 
       {/* Upcoming Events Section*/}
-      <div className="flex flex-col relative px-10 pb-10">
+      <div className="flex flex-col relative px-5 lg:px-10 pb-10">
         <div className="">
           <h1 className="text-4xl text-[2.4rem] font-lora italic text-[white]">Upcoming Events</h1>
           <hr className="border-red-800 mb-3" />

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import historyImg1 from '/public/assets/History/historypic1.jpg';
 import historyImg2 from '/public/assets/History/SBU Crew 1967.jpeg';
 import historyImg3 from '/public/assets/History/NYStatesRegatta2023Boats.jpg';
-import historyImg4 from '/public/assets/History/BraxtonRegatta2023.JPG';
+import historyImg4 from '/public/assets/History/BraxtonRegatta2023.jpg';
 import { useEffect, useRef, useState } from "react";
 
 export default function History() {

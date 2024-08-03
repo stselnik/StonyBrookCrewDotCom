@@ -5,7 +5,6 @@ import Layout from "@/components/layout";
 import Events from "@/components/events";
 import Slideshow from "@/components/slideshow";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -13,7 +12,7 @@ export default function Home() {
     <Layout>
 
     {/* Landing Screen */}
-    <header className="homepage-landing-img text-center text-white h-[90vh] bg-bottom bg-cover">
+    <header className="bg-[url('/assets/landing-img.jpeg')] md:bg-bottom bg-cover md:bg-fixed text-center text-white h-[90vh]">
       <div className="container mx-auto relative w-fit top-[40%] bottom-[60%]">
         <div className="flex flex-col">
           <div className="mx-auto">
@@ -29,14 +28,15 @@ export default function Home() {
       </div>
     </header>
 
-    <main className={`items-center min-h-screen min-w-screen p-3 md:p-10 bg-[#c84444]`}>
+    <main className={`items-center min-h-screen min-w-screen bg-[#c84444]`}>
       {/* Main Information */}
-      <div className="flex flex-col xl:flex-row w-fit p-10 relative top-[-20vh] mb-10 bg-[white] rounded-md drop-shadow-element">
-        <div className="flex-1 xl:max-w-[40%] fade-in-element">
+      <div className="flex flex-col xl:flex-row w-fit relative p-10 mb-10 gap-10 bg-[white] drop-shadow-element">
+        {/* Main Text Section */}
+        <div className="flex-1 xl:max-w-[45%] fade-in-element">
           <h1 className="text-4xl text-[2.4rem] font-lora italic">Who We Are</h1>
           <hr className="border-red-800 mb-3" />
           <p className="text-lg 2xl:text-xl 3xl:text-2xl font-light mb-3">
-            Stony Brook University Crew is a high performance club rowing team that competes at an intercollegiate level 
+            Crew at Stony Brook University is a high performance club rowing team that competes at an intercollegiate level 
             throughout New York, New England, and the Mid-Atlantic region of the United States. You can read more about 
             the team <Link href='/aboutus' className="underline text-red-800 hover:text-[#5eb7ff]">here</Link>.</p>
           <p className="text-lg 2xl:text-xl 3xl:text-2xl font-light mb-3 xl:mb-10">
@@ -59,17 +59,13 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Slideshow / Carousel (Needs to be implemented) */}
+        {/* Slideshow / Carousel */}
         <Slideshow />
-        <div className={/*"flex-1 w-full h-fit fade-in-element p-5"*/ ""}>
-            {/* <img src='/assets/Slideshow/slideshow2.JPG' className="rounded-md max-h-[740px] mx-auto drop-shadow-xl" /> */ }
-            
-        </div>
       </div>
 
       {/* Upcoming Events Section*/}
-      <div className="flex flex-col relative top-[-20vh]">
-        <div className="px-3 ">
+      <div className="flex flex-col relative px-10 pb-10">
+        <div className="">
           <h1 className="text-4xl text-[2.4rem] font-lora italic text-[white]">Upcoming Events</h1>
           <hr className="border-red-800 mb-3" />
         </div>

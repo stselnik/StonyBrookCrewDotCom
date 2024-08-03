@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+*/
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+.fade-in-element{
+  animation: fade-in 1s ease-in-out;
+}
+
+.drop-shadow-element {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.homepage-landing-img {
+  background: linear-gradient(180deg, rgba(255,255,255, 0) 80.5%, rgba(255, 242, 213, 0.2) 85.5%, #c84444 100%), url('/assets/landing-img.jpeg') lightgray 37.126px 0px / 97.638% 100.19% no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+
+
+/* Allows font to adjust as screen size changes. (Fonts are in rem units, adjusting the base font will allow all others to follow. 
+@layer base {
+  html {
+    @apply 2xl:text-xl 3xl:text-2xl 4xl:text-3xl 5xl:text-4xl;
+  }
+}
+*/

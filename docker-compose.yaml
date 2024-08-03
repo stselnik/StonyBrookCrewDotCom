@@ -1,0 +1,14 @@
+name: stony-brook-crew-website
+
+services:
+  frontend:
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - /app/node_modules
+      - ./src:/app/src
+    stdin_open: true
+    tty: true
+    container_name: stony-brook-crew-website
+

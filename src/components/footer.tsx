@@ -13,9 +13,9 @@ const Footer = () => {
         return(
             <div className="flex flex-row gap-10 my-auto mb-6">
                 {icons.map((Icon) => (
-                    <div className="cursor-pointer fill-white hover:fill-gray-200 hover:text-gray-200">
-                        <a href={Icon.link} target="blank"><Icon.icon /></a>
-                    </div>
+                    <a href={Icon.link} target="blank" className="cursor-pointer fill-white text-white hover:bg-[#ffffff2f] p-2 rounded-full">
+                         <Icon.icon />
+                    </a>
                 ))}
                 
             </div>
@@ -25,9 +25,9 @@ const Footer = () => {
 
 
     return(
-        <footer className="flex flex-col items-center text-center w-full bg-[#c84444] pt-16 pb-5 text-white">
+        <footer className="flex flex-col items-center text-center w-full bg-[#c84444] pt-10 pb-5 text-white">
             <FooterIcons />
-            <p className="w-full">© 2024 - Crew at Stony Brook University</p>
+            <p>© 2024 - Crew at Stony Brook University</p>
         </footer>
     );
 }

@@ -69,7 +69,7 @@ const Slideshow = () => {
 
   return (
     <div className="
-        relative flex justify-center self-center m-3 z-50 fade-in-element
+        relative flex justify-center self-center  z-50 fade-in-element
         w-[140%] max-w-[90vw] min-h-[55vw] xl:flex-1 xl:h-[65vh] xl:max-h-[35vw] xl:min-h-[25vw] ">
       <div className="absolute flex flex-row justify-between aspect-[3/2] h-full max-w-full">
         <SlideshowButtons />

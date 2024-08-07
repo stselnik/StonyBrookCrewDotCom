@@ -17,8 +17,9 @@ const NavigationBar = () => {
     const pages = [
         {id: 1, text:'Homepage', path:'/'},
         {id: 2, text:'About Us', path: '/aboutus'},
-        {id: 3, text:'History', path: '/history'},
-        {id: 4, text:'Prospective Members', path:'/prospectiverowers'},
+        {id: 3, text:'Prospective Members', path:'/prospectivemembers'},
+        {id: 4, text:'History', path: '/history'},
+        
     ];
 
     const DesktopNavbar = () => {

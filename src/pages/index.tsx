@@ -12,7 +12,7 @@ export default function Home() {
     <Layout>
 
     {/* Landing Screen */}
-    <header className="bg-[url('/assets/landing-img.jpeg')] md:bg-bottom bg-cover md:bg-fixed text-center text-white h-[90vh]">
+    <header className="bg-[url('/assets/landing-img.jpeg')] md:bg-bottom bg-cover md:bg-fixed bg-no-repeat text-center text-white h-[90vh]">
       <div className="container mx-auto relative w-fit top-[40%] bottom-[60%]">
         <div className="flex flex-col">
           <div className="mx-auto">

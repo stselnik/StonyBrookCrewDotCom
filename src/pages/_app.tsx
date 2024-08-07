@@ -19,7 +19,7 @@ const lora = Lora({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${lato.variable} ${lora.variable} font-lato`}> 
+    <main className={`${lato.variable} ${lora.variable} font-lato scroll-smooth`}> 
       <Component {...pageProps} />
     </main>
     )

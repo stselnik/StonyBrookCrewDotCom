@@ -18,7 +18,7 @@ const NavigationBar = () => {
   const pages = [
     { id: 1, text: 'Homepage', path: '/' },
     { id: 2, text: 'About Us', path: '/aboutus' },
-    { id: 3, text: 'Prospective Members', path: '/prospectiverowers' },
+    { id: 3, text: 'Prospective Members', path: '/prospectivemembers' },
     { id: 4, text: 'History', path: '/history' },
   ];
 
@@ -68,9 +68,9 @@ const NavigationBar = () => {
     <nav className="absolute flex justify-center items-center h-[4rem] w-full my-3 text-white z-50">
       <Link href='/' className="absolute left-3">
         <Image src="/assets/SBU Crew Logo Transparent.png"
-          width={100}
-          height={100}
-          className="h-[3.6rem]" alt="SBUCrew" />
+          width={0}
+          height={0}
+          className="h-[3.6rem] w-auto" alt="SBUCrew" />
       </Link>
       <DesktopNavbar />
       <MobileNavToggle />

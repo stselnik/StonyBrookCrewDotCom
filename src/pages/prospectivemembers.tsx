@@ -33,8 +33,10 @@ export default function ProspectiveMembers() {
                 <title>Prospective Members</title>
             </Head>
             <LandingScreen />
-            <main className="">
-
+            <main className="flex min-h-screen flex-col items-center justify-between bg-[#c84444] p-5">
+                <div>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc1lZZvkySRMGWaKhMFM9RdQ39wpy2_X5JtNU36XOXUy8YzeA/viewform?embedded=true" width="640" height="2550" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
             </main>
         </Layout>
     );

@@ -12,6 +12,7 @@ const lato = Lato({
 });
 
 const lora = Lora({
+  weight: ['400'],
   subsets: ['latin'], 
   style: ['normal', 'italic'],
   variable: '--font-lora'

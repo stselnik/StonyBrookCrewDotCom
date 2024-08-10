@@ -11,12 +11,29 @@ export default function ProspectiveMembers() {
     const LandingScreen = () => {
 
         function RecruitmentMessage() {
+            const month = new Date(Date.now()).getMonth();
+            const year = new Date(Date.now()).getFullYear();
+            var RecruitmentSeason;
+
+             // If the current month is November - December: Recruiting for Spring of the next year.
+            if (9 < month) {
+                RecruitmentSeason = <h1 className="text-[3.5rem] leading-[1]">SPRING {year + 1}</h1>
+            }
+            // If the current month is January - March: Still recruiting for Spring of the current year.
+            else if ((0 <= month && month < 3)) {
+                RecruitmentSeason = <h1 className="text-[3.5rem] leading-[1]">SPRING {year}</h1>
+            }
+            // If the current month is April-October: Recruiting for Fall of the current year.
+            else {
+                RecruitmentSeason = <h1 className="text-[4.2rem] leading-[1]">FALL {year}</h1>
+            }
+
             return(
                 <div className={`flex flex-col items-center my-auto text-white text-4xl ` + collegeFont.className}>
                     <h1 className="text-[10rem] leading-[0.8]">NOW</h1>
                     <h1 className="text-[3.75rem] leading-[1]">RECRUITING</h1>
                     <Image src="/assets/Prospective Members/FOR-White.png" width={300} height={300}  alt="Two Boats rowing under the sunrise on Port Jefferson Harbor."/>
-                    <h1 className="text-[4.2rem] leading-[1]">FALL 2024</h1>
+                    {RecruitmentSeason}
                 </div>
             )
         }

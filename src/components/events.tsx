@@ -35,12 +35,12 @@ const Event = (event: {name: string; date: Date; time: string; location: string;
     }
     
     return(
-            <div key={event.date.getTime()} className="bg-[#FFDADA] rounded-2xl border-solid border-[3px] border-[#FFDADA] hover:border-white drop-shadow-element">
+            <div key={event.date.getTime()} className="bg-[#ffffff09] rounded-2xl border-solid border-[2px] border-[#FFDADA] hover:border-white drop-shadow-element">
                 { /* Main Event Information */ }
                 <div className="flex flex-row w-full h-20 cursor-pointer" onClick={() => setExpand(!expand)}>
                     <div className="flex flex-col justify-center w-full h-full p-2 md:p-5 ">
-                        <h3 className="text-xl sm:text-2xl font-light">{event.name}</h3>
-                        <div className="hidden sm:flex flex-row gap-5 text-sm md:text-md lg:text-lg text-[#404040] font-light italic">
+                        <h3 className="text-xl sm:text-2xl font-light text-white">{event.name}</h3>
+                        <div className="hidden sm:flex flex-row gap-5 text-sm md:text-md lg:text-lg text-[#ffffff] font-light">
                             <p className="">{days[event.date.getDay()]}, {months[event.date.getMonth()]} {event.date.getDate()}, {event.date.getFullYear()}</p>
                             <p className="">Location: {event.location}</p>
                         </div>
@@ -50,7 +50,7 @@ const Event = (event: {name: string; date: Date; time: string; location: string;
                     </div>
                 </div>
                 { /* Expanded Event Information */ }
-                <div className={expand ? "flex flex-col px-2 sm:px-5 text-sm md:text-md lg:text-lg text-[#404040] font-light italic" : "hidden"}>
+                <div className={expand ? "flex flex-col px-2 sm:px-5 text-sm md:text-md lg:text-lg text-[#ffffff] font-light" : "hidden"}>
                     <hr className="border-white mb-2"/>
                     <p className="sm:hidden">{days[event.date.getDay()]}, {months[event.date.getMonth()]} {event.date.getDate()}, {event.date.getFullYear()}</p>
                     <p className={event.time.length != 0 ? "" : "hidden"}>Time: {event.time}</p>
@@ -84,7 +84,7 @@ const Events = () => {
 
     return(
         <>
-        <ul className="flex flex-col gap-3 px-3 fade-in-element">
+        <ul className="flex flex-col gap-3 fade-in-element">
             {upcomingEvents.map(event => (
                 Event(event)
             ))}

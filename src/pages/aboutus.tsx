@@ -124,7 +124,7 @@ export default function AboutUs() {
             { /* Landing Screen */ }
             <LandingScreen />
             { /* Main Info */}
-            <main className="flex min-h-screen flex-col items-center justify-between bg-[#F9F9F9] px-10 lg:px-24 3xl:px-40 py-12">
+            <main className="flex min-h-screen flex-col items-center justify-between bg-[#F9F9F9] px-10 lg:px-[5%] py-12">
                 <TeamSection />
                 <CoachSection />
                 <EboardSection />

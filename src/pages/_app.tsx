@@ -12,6 +12,7 @@ const lato = Lato({
 });
 
 const lora = Lora({
+  weight: ['400'],
   subsets: ['latin'], 
   style: ['normal', 'italic'],
   variable: '--font-lora'
@@ -19,7 +20,7 @@ const lora = Lora({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${lato.variable} ${lora.variable} font-lato`}> 
+    <main className={`${lato.variable} ${lora.variable} font-lato scroll-smooth`}> 
       <Component {...pageProps} />
     </main>
     )

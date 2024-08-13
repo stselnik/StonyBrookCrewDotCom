@@ -118,7 +118,7 @@ export default function ProspectiveMembers() {
         </div>
         <Positions />
         <div className="w-full h-fit overflow-visible">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdsaQBuBJQve6uIJDAInTQdN87wUKjMeFnnI1PNOn0cYrhspg/viewform" className="w-full overflow-visible" width="640" height="2550" >Loading…</iframe>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdsaQBuBJQve6uIJDAInTQdN87wUKjMeFnnI1PNOn0cYrhspg/viewform?embedded=true" className="w-full overflow-visible" width="640" height="2550" >Loading…</iframe>
         </div>
       </main>
     </Layout>

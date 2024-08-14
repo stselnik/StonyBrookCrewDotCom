@@ -6,14 +6,14 @@ The EBoard Component
 const EBoard = () => {
 
   const members = [
-    { name: "Harrison Bohrer", role: "President", major: "Environmental Studies", imgpath: "/assets/About Us/Harry.jpeg" },
-    { name: "Patrick Muller", role: "Vice President", major: "Computer Science", imgpath: "/assets/About Us/patrick.jpeg" },
-    { name: "Victoria Rocas", role: "Secretary", major: "Envronmental Studies?", imgpath: "/assets/About Us/Harrison.jpg" },
-    { name: "Dominic Stanz", role: "Treasurer", major: "Biology & Economics", imgpath: "/assets/About Us/Harrison.jpg" },
-    { name: "Alexis White", role: "Equipment Manager", major: "Civil Engineering", imgpath: "/assets/About Us/Harrison.jpg" },
-    { name: "Taryn Wilcken", role: "Equipment Manager", major: "Applied Mathematics & Statistics", imgpath: "/assets/About Us/Harrison.jpg" },
-    { name: "Tobias Smith", role: "Equipment Manager", major: "Applied Mathematics & Statistics", imgpath: "/assets/About Us/Harrison.jpg" },
-    { name: "Nino Della Porta", role: "Fundraising Chair & Event Coordinator", major: "Electrical Engineering", imgpath: "/assets/About Us/Harrison.jpg" },
+    { name: "Harrison Bohrer", role: "President", major: "Environmental Studies", imgpath: "/assets/About Us/Harry.jpeg", boat: "The Gooch"},
+    { name: "Patrick Muller", role: "Vice President", major: "Computer Science", imgpath: "/assets/About Us/patrick.jpeg", boat: "The Gooch"},
+    { name: "Victoria Rocas", role: "Secretary", major: "Environmental Studies", imgpath: "/assets/About Us/Tori.jpeg", boat: "The Brett" },
+    { name: "Dominic Stanz", role: "Treasurer", major: "Biology & Economics", imgpath: "/assets/About Us/Harrison.jpg", boat: "The Gooch" },
+    { name: "Alexis White", role: "Equipment Manager", major: "Civil Engineering", imgpath: "/assets/About Us/Harrison.jpg", boat: "The Gooch" },
+    { name: "Taryn Wilcken", role: "Equipment Manager", major: "Applied Mathematics & Statistics", imgpath: "/assets/About Us/Harrison.jpg", boat: "The Gooch" },
+    { name: "Tobias Smith", role: "Equipment Manager", major: "Applied Mathematics & Statistics", imgpath: "/assets/About Us/Harrison.jpg", boat: "The Gooch" },
+    { name: "Nino Della Porta", role: "Fundraising Chair & Event Coordinator", major: "Electrical Engineering", imgpath: "/assets/About Us/Harrison.jpg", boat: "The Gooch" },
   ];
 
   /* Populates div with the profile for each E-Board Member*/
@@ -27,7 +27,7 @@ const EBoard = () => {
             <h3 className="text-2xl font-light text-start overflow-x-visible max-w-64 2xl:max-w-none">{member.role}</h3>
             <hr className="mb-3 border-red-800" />
             <p className="text-md font-light">Major: {member.major}</p>
-            <p className="text-md font-light">Favorite Boat: The Gooch</p>
+            <p className="text-md font-light">Favorite Boat: {member.boat}</p>
           </div>
         ))}
       </div>

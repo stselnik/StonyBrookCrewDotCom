@@ -7,7 +7,7 @@ const EBoard = () => {
 
   const members = [
     { name: "Harrison Bohrer", role: "President", major: "Environmental Studies", imgpath: "/assets/About Us/Harry.jpeg", boat: "The Gooch"},
-    { name: "Patrick Muller", role: "Vice President", major: "Computer Science", imgpath: "/assets/About Us/patrick.jpeg", boat: "The Gooch"},
+    { name: "Patrick Muller", role: "Vice President", major: "Computer Science", imgpath: "/assets/About Us/patrick.jpeg", boat: "The Dudzick"},
     { name: "Victoria Rocas", role: "Secretary", major: "Environmental Studies", imgpath: "/assets/About Us/Tori.jpeg", boat: "The Brett" },
     { name: "Dominic Stanz", role: "Treasurer", major: "Biology & Economics", imgpath: "/assets/About Us/Harrison.jpg", boat: "The Gooch" },
     { name: "Alexis White", role: "Equipment Manager", major: "Civil Engineering", imgpath: "/assets/About Us/Harrison.jpg", boat: "The Gooch" },

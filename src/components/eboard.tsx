@@ -1,3 +1,4 @@
+import Image from "next/image";
 /*
 The EBoard Component
 */
@@ -21,7 +22,7 @@ const EBoard = () => {
       <div className="flex flex-wrap gap-5 justify-center">
         {members.map((member, index) => (
           <div key={index} className="flex flex-col py-5 px-5 rounded-3xl">
-            <img src={member.imgpath} alt={"Profile of " + member.name} className="rounded-full w-[35vh] h-[35vh] self-center drop-shadow-xl" />
+            <Image src={member.imgpath} alt={"Profile of " + member.name} width={0} height={0} className="rounded-full w-[35vh] h-[35vh] self-center drop-shadow-xl object-cover" />
             <h2 className="text-3xl">{member.name}</h2>
             <h3 className="text-2xl font-light text-start overflow-x-visible max-w-64 2xl:max-w-none">{member.role}</h3>
             <hr className="mb-3 border-red-800" />

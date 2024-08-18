@@ -17,20 +17,20 @@ export default function ProspectiveMembers() {
 
       // If the current month is November - December: Recruiting for Spring of the next year.
       if (9 < month) {
-        RecruitmentSeason = <h1 className="text-[3.5rem] leading-[1]">SPRING {year + 1}</h1>
+        RecruitmentSeason = <h2 className="text-[3.5rem] leading-[1]">SPRING {year + 1}</h2>
       }
       // If the current month is January - March: Still recruiting for Spring of the current year.
       else if ((0 <= month && month < 3)) {
-        RecruitmentSeason = <h1 className="text-[3.5rem] leading-[1]">SPRING {year}</h1>
+        RecruitmentSeason = <h2 className="text-[3.5rem] leading-[1]">SPRING {year}</h2>
       }
       // If the current month is April-October: Recruiting for Fall of the current year.
       else {
-        RecruitmentSeason = <h1 className="text-[4.2rem] leading-[1]">FALL {year}</h1>
+        RecruitmentSeason = <h2 className="text-[4.2rem] leading-[1]">FALL {year}</h2>
       }
 
       return (
         <div className={`flex flex-col items-center my-auto text-white text-4xl ` + collegeFont.className}>
-          <h1 className="text-[10rem] leading-[0.8]">NOW</h1>
+          <h2 className="text-[10rem] leading-[0.8]">NOW</h2>
           <h1 className="text-[3.75rem] leading-[1]">RECRUITING</h1>
           <Image src="/assets/Prospective Members/FOR-White.png" width={300} height={300} alt="Two Boats rowing under the sunrise on Port Jefferson Harbor." />
           {RecruitmentSeason}
@@ -55,7 +55,7 @@ export default function ProspectiveMembers() {
       return (
         <div className="flex flex-col lg:flex-row w-full max-w-[] bg-[#BA3F3F] m-3 rounded-xl drop-shadow-element">
           <div className="flex-1 mx-5 my-3 lg:my-10 text-lg font-light">
-            <h1 className="text-3xl font-lora">{name}</h1>
+            <h3 className="text-3xl font-lora">{name}</h3>
             <hr className="border-[#003665]" />
             <p>{desc}</p>
             <ul className="list-disc pl-5">
@@ -106,7 +106,7 @@ export default function ProspectiveMembers() {
       <LandingScreen />
       <main className="flex min-h-screen flex-col items-center justify-between bg-[#c84444] pt-16 px-5 lg:px-[8%] text-white">
         <div className="">
-          <h1 className="text-3xl font-lora">Prospective Members</h1>
+          <h2 className="text-3xl font-lora">Prospective Members</h2>
           <hr className="border-[#003665] rounded-xl" />
           <p className="text-lg font-light">
             Crew at Stony Brook University is open to undergraduate and graduate students of Stony Brook University of all skill levels. We have practice from Monday-Friday at 6am at the MAC Courts of the Walter J. Hawrys Campus Recreation Center for land practice and 5:15am at Port Jefferson Yacht Club for water practice.

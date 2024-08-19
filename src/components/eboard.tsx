@@ -12,7 +12,7 @@ const EBoard = () => {
     { name: "Dominic Stanz", role: "Treasurer", major: "Biology & Economics", imgpath: "/assets/About Us/Harrison.jpg", boat: "The Gooch" },
     { name: "Alexis White", role: "Equipment Manager", major: "Civil Engineering", imgpath: "/assets/About Us/Harrison.jpg", boat: "The Gooch" },
     { name: "Taryn Wilcken", role: "Equipment Manager", major: "Applied Mathematics & Statistics", imgpath: "/assets/About Us/Harrison.jpg", boat: "The Gooch" },
-    { name: "Tobias Smith", role: "Equipment Manager", major: "Applied Mathematics & Statistics", imgpath: "/assets/About Us/Harrison.jpg", boat: "The Gooch" },
+    { name: "Tobias Smith", role: "Equipment Manager", major: "Applied Mathematics & Statistics", imgpath: "/assets/About Us/Toby copy.jpeg", boat: "The Gooch" },
     { name: "Nino Della Porta", role: "Fundraising Chair & Event Coordinator", major: "Electrical Engineering", imgpath: "/assets/About Us/Harrison.jpg", boat: "The Gooch" },
   ];
 

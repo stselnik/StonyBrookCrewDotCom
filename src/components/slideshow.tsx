@@ -6,8 +6,8 @@ const Slideshow = () => {
 
   const images = [
     { id: 0, path: '/assets/Slideshow/slideshow1.jpg', alt: 'Close up of a group of rowers rowing in Lake Lure, North Carolina.' },
-    { id: 1, path: '/assets/Slideshow/slideshow2.jpg', alt: 'Women\'s Varsity 4 preparing to launch with their coaches on the dock.' },
-    { id: 2, path: '/assets/Slideshow/slideshow3.jpg', alt: 'Men\'s Varsity 4 on the water after a race.' },
+    { id: 1, path: '/assets/Slideshow/slideshow2.JPG', alt: 'Women\'s Varsity 4 preparing to launch with their coaches on the dock.' },
+    { id: 2, path: '/assets/Slideshow/slideshow3.JPG', alt: 'Men\'s Varsity 4 on the water after a race.' },
     { id: 3, path: '/assets/Slideshow/slideshow4.jpeg', alt: 'Co-ed Varsity 8 boat on the water at Spring Break.' },
     { id: 4, path: '/assets/Slideshow/slideshow5.jpeg', alt: 'Shot of 4 boats of rowers practicing racing on the water.' },
 

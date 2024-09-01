@@ -6,7 +6,7 @@ import Head from "next/head";
 
 const LandingScreen = () => {
     return(
-        <header className="h-[50vh] bg-[url('/assets/aboutus-img.jpg')] bg-cover bg-center drop-shadow-xl">
+        <header className="h-[50vh] bg-[url('/assets/aboutus-img.jpeg')] bg-cover bg-center drop-shadow-xl">
             <div className="h-full bg-gradient-to-b from-[#524a3db1] to-[#a7a7a70d] to-30% flex justify-center relative" >
                 <h1 className="font-lora absolute bottom-0 mb-3 drop-shadow text-[#F9F9F9] text-7xl">About Us</h1>
             </div>

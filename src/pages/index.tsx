@@ -33,7 +33,7 @@ export default function Home() {
       <div className="flex flex-col xl:flex-row w-fit relative py-10 px-5 lg:px-[5%] mb-10 gap-10 bg-[white] drop-shadow-element">
         {/* Main Text Section */}
         <div className="flex-1 xl:max-w-[45%] fade-in-element">
-          <h1 className="text-4xl text-[2.4rem] font-lora italic">Who We Are</h1>
+          <h2 className="text-4xl text-[2.4rem] font-lora italic">Who We Are</h2>
           <hr className="border-red-800 mb-3" />
           <p className="text-lg font-light mb-3">
             Crew at Stony Brook University is a high performance club rowing team that competes at an intercollegiate level 
@@ -45,7 +45,7 @@ export default function Home() {
           Check out our <Link href='/prospectivemembers' className="underline text-red-800 hover:text-[#5eb7ff]">prospective members</Link> form. 
           </p>
 
-          <h1 className="text-4xl text-[2.4rem] font-lora italic">Get In Touch</h1>
+          <h2 className="text-4xl text-[2.4rem] font-lora italic">Get In Touch</h2>
           <hr className="border-red-800 mb-3" />
           <p className="text-lg font-light mb-3">
             Want to contact us? Feel free to reach us directly at any time at&nbsp; 
@@ -66,7 +66,7 @@ export default function Home() {
       {/* Upcoming Events Section*/}
       <div className="flex flex-col relative px-5 lg:px-[5%] pb-10">
         <div className="">
-          <h1 className="text-4xl text-[2.4rem] font-lora italic text-[white]">Upcoming Events</h1>
+          <h2 className="text-4xl text-[2.4rem] font-lora italic text-[white]">Upcoming Events</h2>
           <hr className="border-red-800 mb-3" />
         </div>
         <Events />

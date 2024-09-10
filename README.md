@@ -1,6 +1,6 @@
 # Stony Brook Crew Dot Com
 
-A redesign of the stony brook rowing team website.
+A redesign of the Stony Brook Rowing Team website.
 ## Original Redesign
 ### Primary Contributors
 

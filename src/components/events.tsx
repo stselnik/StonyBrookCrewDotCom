@@ -6,7 +6,7 @@ const open_sans = Open_Sans({subsets: ['latin']});
 
 const Event = (event: {name: string; date: Date; time: string; location: string; directions: string; desc: string; calendar:string}) => {
     /* Calendar link can be found by creating a Google Calendar Event and copying the link from 'Invite via link'. */
-    
+
     const [expand, setExpand] = useState(false);
 
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -14,13 +14,13 @@ const Event = (event: {name: string; date: Date; time: string; location: string;
 
 
     /**
-     * @constructor formatDirections(address): 
+     * @constructor formatDirections(address):
      * @param {string} address - The street address of the location.
      * @returns {string} link - A usable google maps link to get directions to the address.
         Takes a street address in the form of a string in the following format and formats it into a usable Google Maps Link.
-        Address Format: 'NUMBER Street, City, State ZIP' 
-        (e.g. '100 Nicolls Rd, Stony Brook, NY 11794' or '15-5 Bennetts Rd, Setauket- East Setauket, NY 11733') 
-        You can copy the exact street address that Google gives you and it should work. 
+        Address Format: 'NUMBER Street, City, State ZIP'
+        (e.g. '100 Nicolls Rd, Stony Brook, NY 11794' or '15-5 Bennetts Rd, Setauket- East Setauket, NY 11733')
+        You can copy the exact street address that Google gives you and it should work.
     */
     const formatDirections = (address: string) => {
         let link = 'https://www.google.com/maps/place/';
@@ -33,7 +33,7 @@ const Event = (event: {name: string; date: Date; time: string; location: string;
         }
         return link;
     }
-    
+
     return(
             <div key={event.date.getTime()} className="bg-[#ffffff09] rounded-2xl border-solid border-[2px] border-[#FFDADA] hover:border-white drop-shadow-element">
                 { /* Main Event Information */ }
@@ -67,11 +67,14 @@ const Event = (event: {name: string; date: Date; time: string; location: string;
 }
 
 const Events = () => {
-    
+
     const events = [
         {name: "Head of the Fish - Saratoga Regatta", date: new Date('October 26, 2024'), time: "",location: "Fish Creek, Saratoga Springs, NY", directions:"684 N Country Rd, Setauket- East Setauket, NY 11733", desc: "", calendar:"https://calendar.app.google/9jkTmUsnaCxfvWGP7"},
-        {name: "Stony Brook Crew Alumni Day (Tentative Day)", date: new Date('November 2, 2024'), time:"9:00AM - 11:30AM", location: "Port Jefferson Yacht Club", directions:"2 Pass Way, Port Jefferson, NY 11777", desc: "Calling all Alumni of SBU Crew! Alumni Breakfast Day is being held on November 2nd, 2024 (tentatively) at the Port Jefferson Yacht Club Clubhouse from 9AM-11:30AM. Enjoy having a tasty meal while catching up with your fellow SBU Crew alumni! Save the date and RSVP by email now: sbu.crew.alumni@gmail.com. We can't wait to see you there!", calendar:"https://calendar.app.google/9jkTmUsnaCxfvWGP7"},
-        {name: "First Official Practice", date: new Date('September 4, 2024'), time:"6:00AM", location: "Multi-Activity Courts (MAC) - Walter J. Hawrys Campus Recreation Center", directions: "39 John S. Toll Drive, Stony Brook, NY 11794", desc:"Come join us for our first official practice of the Fall 2024 semester! Practice is open to all current undergraduate and graduate students of Stony Brook University. No experience is required so feel free to join if you're interested in joining, experienced, or just curious! You can find us at the Campus Rec Center downstairs in the MAC Courts at 6am. See you there!", calendar:""}, 
+        {name: "Stony Brook Crew Alumni Day", date: new Date('November 2, 2024'), time:"9:00AM - 11:30AM", location: "Port Jefferson Yacht Club", directions:"2 Pass Way, Port Jefferson, NY 11777", desc: "Calling all Alumni of SBU Crew! Alumni Breakfast Day is being held on November 2nd, 2024 (tentatively) at the Port Jefferson Yacht Club Clubhouse from 9AM-11:30AM. Enjoy having a tasty meal while catching up with your fellow SBU Crew alumni! Save the date and RSVP by email now: sbu.crew.alumni@gmail.com. We can't wait to see you there!", calendar:"https://calendar.app.google/9jkTmUsnaCxfvWGP7"},
+        {name: "First Official Practice", date: new Date('September 4, 2024'), time:"6:00AM", location: "Multi-Activity Courts (MAC) - Walter J. Hawrys Campus Recreation Center", directions: "39 John S. Toll Drive, Stony Brook, NY 11794", desc:"Come join us for our first official practice of the Fall 2024 semester! Practice is open to all current undergraduate and graduate students of Stony Brook University. No experience is required so feel free to join if you're interested in joining, experienced, or just curious! You can find us at the Campus Rec Center downstairs in the MAC Courts at 6am. See you there!", calendar:""},
+        {name: "The Poughkeespie Regatta", date: new Date('October 5, 2024'), time:"8:00AM", location: "Hudson River Rowing Association", directions: "270 N Water St", desc:"Come experience our first regatta of the fall where we row on the scenic Hudson River", calendar:""},
+        {name: "Frostbite Regatta", date: new Date('November 9, 2024'), time:"TDB", location: "Mercer lake, West windsor, NJ", directions: "334 S. Post Road, West Windsor, NJ", desc:"Come experience our first regatta of the weekend at the frostbite regatta in West Windsor, NJ", calendar:""},
+        {name: "Braxton Memorial Regatta", date: new Date('November 10, 2024'), time:"TDB", location: "Mercer lake, West windsor, NJ", directions: "334 S. Post Road, West Windsor, NJ", desc:"Come experience our second regatta of the weekend at the frostbite regatta in West Windsor, NJ", calendar:""},
     ];
 
     // Sorts Events into chronological order.

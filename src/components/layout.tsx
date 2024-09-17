@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "./navbar";
 import React, { ReactNode } from "react";
 import Footer from "./footer";
+import { Analytics } from '@vercel/analytics/react';
 
 
 export default function Layout(props: { children: ReactNode }) {
@@ -15,6 +16,7 @@ export default function Layout(props: { children: ReactNode }) {
       </Head>
       <Navbar />
       {props.children}
+      <Analytics />
       <Footer />
     </>
   )

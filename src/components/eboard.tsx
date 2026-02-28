@@ -9,7 +9,7 @@ const EBoard = () => {
     { name: "Harrison Bohrer", role: "President", major: "Environmental Studies", imgpath: "/assets/About Us/Harry_B_Eboard.jpeg", boat: "The 2014"},
     { name: "Aidan Esperance", role: "Secretary", major: "Health Science", imgpath: "/assets/About Us/Aidan_E_Eboard.jpeg", boat: "The 2014" },
     { name: "Lucy Tomasic", role: "Secretary", major: "Biology", imgpath: "/assets/About Us/Lucy_T_Eboard.jpeg", boat: "The Carlisle" },
-    { name: "Taryn Wilcken", role: "Treasurer", major: "Math, Applied Math & Statistics", imgpath: "/assets/About Us/Taryn_W_Eboard.jpeg", boat: "The Ekdahl" },
+    { name: "Dakota Ramos", role: "Treasurer", major: "Marine Vertebrae Biology", imgpath: "/assets/About Us/Dakota_R_Eboard.jpeg", boat: "The Dudzick" },
     { name: "Sarah Kwong", role: "Equipment Manager", major: "Mechanical Engineering", imgpath: "/assets/About Us/Sarah_K_Eboard.jpeg", boat: "The Kreitzer" },
     { name: "Victoria Izquierdo", role: "Equipment Manager", major: "Multidisciplinary Studies", imgpath: "/assets/About Us/Victoria_I_Eboard.jpeg", boat: "The Dudzick" },
     { name: "Joshua Liu", role: "Equipment Manager", major: "Mathematics", imgpath: "/assets/About Us/Joshua_L_Eboard.jpeg", boat: "The 2014" },

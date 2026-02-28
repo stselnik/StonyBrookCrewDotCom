@@ -86,6 +86,10 @@ const Events = () => {
         {name: "Stony Brook Crew Alumni Day", date: new Date('November 2, 2025'), time:"9:00AM - 1:00PM", location: "Port Jefferson Yacht Club", directions:"2 Pass Way, Port Jefferson, NY 11777", desc: "Calling all Alumni of SBU Crew! Alumni Breakfast Day is being held on Sunday, November 2nd, 2025 at the Port Jefferson Yacht Club Clubhouse. Enjoy having a tasty meal while catching up with your fellow SBU Crew alumni! Save the date and RSVP by email now: sbu.crew.alumni@gmail.com. We can't wait to see you there!", calendar:""},
         {name: "Frostbite Regatta", date: new Date('November 8, 2025'), time:"TDB", location: "Mercer Lake, West Windsor, NJ", directions: "334 S. Post Road, West Windsor, NJ", desc:"Come experience our first regatta of the weekend at the frostbite regatta in West Windsor, NJ.", calendar:""},
         {name: "Braxton Memorial Regatta", date: new Date('November 9, 2025'), time:"TDB", location: "Mercer Lake, West Windsor, NJ", directions: "334 S. Post Road, West Windsor, NJ", desc:"Come experience our second regatta of the weekend at the frostbite regatta in West Windsor, NJ.", calendar:""},
+    
+        {name: "NYS Collegiate Championships", date: new Date('April 18, 2026'), time: "",location: "Fish Creek, Saratoga Springs, NY", directions:"1460 Route 9P, Saratoga Springs NY 12866", desc: "Come experience our first main regatta of the Spring where we'll compete against many of New York State's best universities. ", calendar:""},
+        {name: "LIU Scrimmage", date: new Date('April 25, 2026'), time: "",location: "Port Washington, NY", directions:"204-296 W Shore Dr, Port Washington, NY 11050", desc: "We have been invited by Long Island University to return and participate/compete in a scrimmage together at their venue at Port Washington, NY.", calendar:""},
+        {name: "Metropolitan Regatta", date: new Date('May 2, 2026'), time: "",location: "Glen Island Park,New Rochelle, NY", directions:"Glen Island Park, NY 10805", desc: "Watch us compete for our last regatta of the semester in New Rochelle!", calendar:""},
     ];
 
     // Sorts Events into chronological order.

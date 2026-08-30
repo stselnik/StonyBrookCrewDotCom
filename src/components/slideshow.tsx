@@ -6,9 +6,9 @@ const Slideshow = () => {
 
   const images = [
     { id: 0, path: '/assets/Slideshow/slideshow1.jpg', alt: 'Close up of a group of rowers rowing in Lake Lure, North Carolina.' },
-    { id: 1, path: '/assets/Slideshow/slideshow2.jpg', alt: 'SBU Rowing at Roth Regatta 2026.' },
-    { id: 2, path: '/assets/Slideshow/slideshow3.jpg', alt: 'Women\'s Novice 8 celebrating.'},
-    { id: 3, path: '/assets/Slideshow/slideshow4.jpg', alt: 'Men\'s Varsity 4 on the water after a race.' },
+    { id: 1, path: '/assets/Slideshow/slideshow2.JPG', alt: 'SBU Rowing at Roth Regatta 2026.' },
+    { id: 2, path: '/assets/Slideshow/slideshow3.JPG', alt: 'Women\'s Novice 8 celebrating.'},
+    { id: 3, path: '/assets/Slideshow/slideshow4.JPG', alt: 'Men\'s Varsity 4 on the water after a race.' },
     { id: 4, path: '/assets/Slideshow/slideshow5.jpg', alt: 'Women\'s Varsity 4 preparing to launch.'},
     { id: 5, path: '/assets/Slideshow/slideshow6.jpg', alt: 'Men\'s Varsity 4 raising their coxswain.' },
     { id: 6, path: '/assets/Slideshow/slideshow7.jpg', alt: 'Two boats resting on the water of Port Jefferson during a practice.' },

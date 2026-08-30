@@ -14,7 +14,7 @@ export default function Home() {
       <div className="container mx-auto relative w-fit top-[40%] bottom-[60%]">
         <div className="flex flex-col">
           <div className="mx-auto">
-            <h1 className="uppercase text-[3.25rem] leading-10 font-barlow font-[500]">
+            <h1 className="uppercase text-[2.75rem] sm:text-[3.25rem] leading-10 font-barlow font-[500]">
               Stony Brook Rowing
             </h1>
           </div>

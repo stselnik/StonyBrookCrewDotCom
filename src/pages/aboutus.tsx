@@ -27,7 +27,7 @@ const TeamSection= () => {
                 </p>
                 <ul className="text-xl font-light list-disc list-inside">
                     <li>We practice five days a week, <strong>Monday through Friday, with land practices taking place at 6 am</strong> at the Stony 
-                        Brook University athletic training center <strong>Multi Activity courts (MAC)</strong>.</li>
+                        Brook University athletic training center, downstairs in the <strong>Multi Activity Courts</strong> (MAC).</li>
                     <li>For water practices, we meet at 5:15 am at the Port Jefferson Yacht Club in Port Jefferson Harbor.</li>
                     <li>We participate in several regattas every semester, and travel for additional training during spring break.</li>  
                 </ul>

@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { Lato, Lora, Barlow_Condensed } from "next/font/google";
+import { Lato, Lora, Barlow } from "next/font/google";
 import type { AppProps } from "next/app";
 import { Analytics } from '@vercel/analytics/react';
 
@@ -19,9 +19,16 @@ const lora = Lora({
   variable: '--font-lora'
 });
 
+const barlow = Barlow({
+  weight: ['100', '300', '400', '700', '900', '500', '600', '200', '800'],
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  variable: '--font-barlow'
+})
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${lato.variable} ${lora.variable} font-lato scroll-smooth`}>
+    <main className={`${lato.variable} ${lora.variable} ${barlow.variable} font-lato scroll-smooth`}>
       <Component {...pageProps} />
     </main>
     )

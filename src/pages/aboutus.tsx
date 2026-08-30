@@ -14,7 +14,6 @@ const LandingScreen = () => {
     );
 }
 
-
 const TeamSection= () => {
 
     const TeamInfo = () => {
@@ -27,8 +26,8 @@ const TeamSection= () => {
                 throughout New York, New England, and the Mid-Atlantic region of the United States.
                 </p>
                 <ul className="text-xl font-light list-disc list-inside">
-                    <li>We practice five days a week, Monday through Friday, with land practices taking place at 6 am at the Stony 
-                        Brook University athletic training center multi activity courts (MAC).</li>
+                    <li>We practice five days a week, <strong>Monday through Friday, with land practices taking place at 6 am</strong> at the Stony 
+                        Brook University athletic training center <strong>Multi Activity courts (MAC)</strong>.</li>
                     <li>For water practices, we meet at 5:15 am at the Port Jefferson Yacht Club in Port Jefferson Harbor.</li>
                     <li>We participate in several regattas every semester, and travel for additional training during spring break.</li>  
                 </ul>
@@ -39,8 +38,8 @@ const TeamSection= () => {
     const TeamImage = () => {
         return(
             <div className="lg:flex-1 self-center">
-                <img className="rounded-2xl drop-shadow-lg border-solid border-[#b74040ad]" src="/assets/About Us/NYStates Regatta 2023.jpg" alt="Stony Brook Crew at New York State Regatta"/>
-                <figcaption className="text-lg font-light italic text-gray-500 text-center"> NY States Collegiate Championship Regatta - Spring 2023</figcaption>
+                <img className="rounded-2xl drop-shadow-lg border-solid border-[#b74040ad]" src="/assets/About Us/NYStates Regatta 2026.jpg" alt="Stony Brook Crew at New York State Championship Regatta"/>
+                <figcaption className="text-lg font-light italic text-gray-500 text-center"> NY States Collegiate Championship Regatta - Spring 2026</figcaption>
             </div>
         );
     }
@@ -67,7 +66,7 @@ const CoachSection = () => {
                 </div>
                
                 <p className="text-xl font-light">
-                Our head coach is Tim Massi. The 2025-2026 season will be his third year as coach of Stony Brook Crew. 
+                Our head coach is Tim Massi. The 2026-2027 season will be his fourth year as coach of Stony Brook Crew. 
                 He is a Stony Brook University and SBU Crew alum and has a passion for rowing and leading. He has an enthusiasm for 
                 learning and guiding our team to achieve more success everyday and every practice.
                 </p>

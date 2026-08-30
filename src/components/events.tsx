@@ -39,7 +39,7 @@ const Event = (event: {name: string; date: Date; time: string; location: string;
                 { /* Main Event Information */ }
                 <div className="flex flex-row w-full h-20 cursor-pointer" onClick={() => setExpand(!expand)}>
                     <div className="flex flex-col justify-center w-full h-full p-2 md:p-5 ">
-                        <h3 className="text-xl sm:text-2xl font-light text-white underline underline-offset-2">{event.name}</h3>
+                        <h3 className="text-xl sm:text-2xl font-light font-barlow text-white underline underline-offset-2">{event.name}</h3>
                         <div className="hidden sm:flex flex-row gap-5 text-sm md:text-md lg:text-lg text-[#ffffff] font-light">
                             <p className="min-w-fit w-[23%]">{days[event.date.getDay()]}, {months[event.date.getMonth()]} {event.date.getDate()}, {event.date.getFullYear()}</p>
                             <p className="">Location: {event.location}</p>
@@ -55,8 +55,8 @@ const Event = (event: {name: string; date: Date; time: string; location: string;
                     <p className="sm:hidden">{days[event.date.getDay()]}, {months[event.date.getMonth()]} {event.date.getDate()}, {event.date.getFullYear()}</p>
                     <p className={event.time.length != 0 ? "" : "hidden"}>Time: {event.time}</p>
                     <p className="sm:hidden">Location: {event.location}</p>
-                    <p className={event.directions.length != 0 ? "" : "hidden"}>Directions: <a href={formatDirections(event.directions)} className="text-[#4690ff] hover:underline" target="blank">{event.directions}</a></p>
-                    <p className={event.desc.length != 0 ? "p-3 italic" : "hidden"}>{event.desc}</p>
+                    <p className={event.directions.length != 0 ? "" : "hidden"}>Directions: <a href={formatDirections(event.directions)} className="text-[#5eb7ff] hover:text-[#5a96c7] hover:underline" target="blank">{event.directions}</a></p>
+                    <p className={event.desc.length != 0 ? "p-3 font-barlow" : "hidden"}>{event.desc}</p>
                     <div className={event.calendar.length != 0 ? "mx-auto bg-[#f2fff700] p-1 m-2 rounded-lg" : "hidden"}>
                         <a href={event.calendar} className={open_sans.className + " underline hover:text-[#4690ff]"} target="blank">Add to Google Calendar</a>
                     </div>
@@ -90,6 +90,8 @@ const Events = () => {
         {name: "NYS Collegiate Championships", date: new Date('April 18, 2026'), time: "",location: "Fish Creek, Saratoga Springs, NY", directions:"1460 Route 9P, Saratoga Springs NY 12866", desc: "Come experience our first main regatta of the Spring where we'll compete against many of New York State's best universities. ", calendar:""},
         {name: "LIU Scrimmage", date: new Date('April 25, 2026'), time: "",location: "Port Washington, NY", directions:"204-296 W Shore Dr, Port Washington, NY 11050", desc: "We have been invited by Long Island University to return and participate/compete in a scrimmage together at their venue at Port Washington, NY.", calendar:""},
         {name: "Metropolitan Regatta", date: new Date('May 2, 2026'), time: "",location: "Glen Island Park,New Rochelle, NY", directions:"Glen Island Park, NY 10805", desc: "Watch us compete for our last regatta of the semester in New Rochelle!", calendar:""},
+
+        {name: "First Practice - Fall 2026", date: new Date('September 1, 2026'), time:"6:00AM", location: "Multi-Activity Courts (MAC) - Walter J. Hawrys Campus Recreation Center", directions: "39 John S. Toll Drive, Stony Brook, NY 11794", desc:"Come join us for our first official practice of the Fall 2026 semester! Practice is open to all current undergraduate and graduate students of Stony Brook University. No experience is required so feel free to join if you're interested, whether you're experienced or just curious to try it out! You can find us at the Campus Rec Center downstairs in the MAC Courts at 6am. Just bring sneakers and a water bottle! See you there!", calendar:""},
     ];
 
     // Sorts Events into chronological order.
@@ -109,8 +111,8 @@ const Events = () => {
             ))}
         </ul>
         <div className={upcomingEvents.length !== 0 ? "hidden" : "text-xl font-light text-white px-3 text-center"}>
-            <p>There are currently no events scheduled for the rest of the season.</p>
-            <p>We will update this section with all the info regarding our upcoming regattas, alumni days, and other events as soon as days and locations are confirmed!</p>
+            <p>There are no major events listed currently. Please check our <a href="https://www.instagram.com/stonybrookrowing/" target="blank" className="underline">Instagram</a> for more up-to-date public announcements! </p>
+            <p className="text-base">We will update this section with all the info regarding our upcoming regattas, alumni days, and other events as soon as days and locations are confirmed!</p>
         </div>
         </>
 

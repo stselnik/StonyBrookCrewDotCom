@@ -6,12 +6,15 @@ const Slideshow = () => {
 
   const images = [
     { id: 0, path: '/assets/Slideshow/slideshow1.jpg', alt: 'Close up of a group of rowers rowing in Lake Lure, North Carolina.' },
-    { id: 1, path: '/assets/Slideshow/slideshow2.JPG', alt: 'Two boats resting on the water of Port Jefferson during a practice.' },
-    { id: 2, path: '/assets/Slideshow/slideshow3.JPG', alt: 'Women\'s Varsity 4 preparing to launch with their coaches on the dock.' },
-    { id: 3, path: '/assets/Slideshow/slideshow4.JPG', alt: 'Men\'s Varsity 4 on the water after a race.' },
-    { id: 4, path: '/assets/Slideshow/slideshow5.jpeg', alt: 'Co-ed Varsity 8 boat on the water at Spring Break.' },
-    { id: 5, path: '/assets/Slideshow/slideshow6.jpeg', alt: 'Shot of 4 boats of rowers practicing racing on the water.' },
-
+    { id: 1, path: '/assets/Slideshow/slideshow2.jpg', alt: 'SBU Rowing at Roth Regatta 2026.' },
+    { id: 2, path: '/assets/Slideshow/slideshow3.jpg', alt: 'Women\'s Novice 8 celebrating.'},
+    { id: 3, path: '/assets/Slideshow/slideshow4.jpg', alt: 'Men\'s Varsity 4 on the water after a race.' },
+    { id: 4, path: '/assets/Slideshow/slideshow5.jpg', alt: 'Women\'s Varsity 4 preparing to launch.'},
+    { id: 5, path: '/assets/Slideshow/slideshow6.jpg', alt: 'Men\'s Varsity 4 raising their coxswain.' },
+    { id: 6, path: '/assets/Slideshow/slideshow7.jpg', alt: 'Two boats resting on the water of Port Jefferson during a practice.' },
+    { id: 7, path: '/assets/Slideshow/slideshow8.jpg', alt: 'Boat rowing in Port Jefferson Harbor.' },
+    { id: 8, path: '/assets/Slideshow/slideshow9.jpg', alt: 'SBU Crew at NY State Championship 2023.' },
+    { id: 9, path: '/assets/Slideshow/slideshow10.jpg', alt: '4 boats of rowers practicing racing on the water.' },
   ];
 
   // Describes which specific slide is visible.

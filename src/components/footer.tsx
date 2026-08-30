@@ -23,11 +23,14 @@ const Footer = () => {
     );
   }
 
+  /* Year fetched to automatically update Copyright Year */
+  const year = new Date(Date.now()).getFullYear();
+
 
   return (
     <footer className="flex flex-col items-center text-center w-full bg-[#c84444] pt-10 pb-5 text-white">
       <FooterIcons />
-      <p>© 2024 - Crew at Stony Brook University</p>
+      <p>© {year} - Crew at Stony Brook University</p>
     </footer>
   );
 }

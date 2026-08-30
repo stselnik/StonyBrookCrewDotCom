@@ -21,6 +21,7 @@ const config: Config = {
       fontFamily: {
         lato:['var(--font-lato)'],
         lora:['var(--font-lora)'],
+        barlow:['var(--font-barlow)'],
       }
     },
   },
